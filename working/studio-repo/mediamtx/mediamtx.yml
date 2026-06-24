@@ -1,0 +1,26 @@
+logLevel: info
+logDestinations: [stdout]
+rtmp: no
+hls: no
+rtsp: yes
+rtspAddress: 127.0.0.1:8554
+rtspTransports: [tcp]
+rtpAddress: 127.0.0.1:8000
+rtcpAddress: 127.0.0.1:8001
+api: yes
+apiAddress: 127.0.0.1:9997
+metrics: no
+pprof: no
+playback: no
+webrtc: yes
+webrtcAddress: 127.0.0.1:8889
+webrtcLocalUDPAddress: :8189
+webrtcAdditionalHosts: [67.227.156.88, media.divafans.club]
+webrtcICEServers2:
+  - url: stun:stun.l.google.com:19302
+srt: no
+paths:
+  live:
+    source: publisher
+    runOnReady: ffmpeg -nostdin -loglevel warning -i rtsp://127.0.0.1:8554/live -c:v copy -c:a aac -ar 44100 -b:a 160k -f flv rtmp://127.0.0.1:1935/live/jP8NvaMBLbVM4OGqElFEDSRsE6FIXr
+    runOnReadyRestart: yes

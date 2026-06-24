@@ -1,0 +1,11 @@
+[Unit]
+Description=MediaMTX (WHIP ingest)
+After=network-online.target
+Wants=network-online.target
+[Service]
+WorkingDirectory=/opt/mediamtx
+ExecStart=/opt/mediamtx/mediamtx /opt/mediamtx/mediamtx.yml
+Restart=on-failure
+RestartSec=5
+[Install]
+WantedBy=multi-user.target

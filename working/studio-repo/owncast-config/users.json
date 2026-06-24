@@ -1,0 +1,17 @@
+[
+    {
+        "username": "model1",
+        "hash": "$2y$10$2exMcCXt7r3PX4Ss8bbWMeBMfxEVTa5hrPg6yDr17rMf8f3.Q7qPq",
+        "role": "performer"
+    },
+    {
+        "username": "clarence",
+        "hash": "$2y$10$etG8u0uwOr5Du9I6St0\/Iue4wiKUcSz9gyqrq8V593NK7iBVUldb.",
+        "role": "admin"
+    },
+    {
+        "username": "YukiLei",
+        "hash": "$2y$10$1aah2c.AowJ9XH1q0qqHd..T0ozzb5VXkcpIyfVI7PfI9qzFkoaxy",
+        "role": "performer"
+    }
+]

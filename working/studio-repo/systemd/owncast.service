@@ -1,0 +1,15 @@
+[Unit]
+Description=Owncast
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=owncast
+Group=owncast
+WorkingDirectory=/opt/owncast/owncast
+ExecStart=/opt/owncast/owncast/owncast
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
