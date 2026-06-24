@@ -6,6 +6,7 @@ foreach(users() as $row){
     session_regenerate_id(true);
     $_SESSION['user']=$u; $_SESSION['role']=$row['role']??'performer';
     jout(['ok'=>true,'name'=>$u,'role'=>$_SESSION['role']]);
+    return;
   }
 }
 usleep(300000); http_response_code(401); jout(['ok'=>false,'error'=>'invalid credentials']);
